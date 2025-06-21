@@ -1,4 +1,3 @@
-
 import { motion, AnimatePresence } from 'framer-motion';
 import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
@@ -23,8 +22,6 @@ const Index = () => {
   };
 
   const pageTransition = {
-    type: 'tween',
-    ease: 'anticipate',
     duration: 0.8,
   };
 

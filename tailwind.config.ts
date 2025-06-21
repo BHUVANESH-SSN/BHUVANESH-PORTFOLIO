@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom portfolio colors
+				'electric-blue': '#00D9FF',
+				'neon-green': '#39FF14',
+				'neon-purple': '#8B5CF6',
+				'neon-gold': '#FFD700',
+				'dark-bg': '#0A0A0A',
+				'dark-card': '#111111',
+				'dark-border': '#333333'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +93,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow-pulse': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px rgba(0, 217, 255, 0.5)',
+					},
+					'50%': {
+						boxShadow: '0 0 40px rgba(0, 217, 255, 0.8), 0 0 60px rgba(0, 217, 255, 0.4)',
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-20px)'
+					}
+				},
+				'spin-slow': {
+					from: {
+						transform: 'rotate(0deg)'
+					},
+					to: {
+						transform: 'rotate(360deg)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'spin-slow': 'spin-slow 20s linear infinite'
+			},
+			fontFamily: {
+				'tech': ['Orbitron', 'monospace'],
+				'modern': ['Inter', 'system-ui', 'sans-serif']
 			}
 		}
 	},

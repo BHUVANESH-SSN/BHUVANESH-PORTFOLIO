@@ -1,43 +1,14 @@
 
-import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Sphere, MeshDistortMaterial, Float } from '@react-three/drei';
 import { TypeAnimation } from 'react-type-animation';
 import { ParticleBackground } from './ParticleBackground';
 import { Button } from '@/components/ui/button';
 import { Download, Mail, Github } from 'lucide-react';
 
-const AnimatedSphere = () => {
-  return (
-    <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-      <Sphere args={[1, 100, 200]} scale={2}>
-        <MeshDistortMaterial
-          color="#00D9FF"
-          attach="material"
-          distort={0.3}
-          speed={1.5}
-          roughness={0}
-        />
-      </Sphere>
-    </Float>
-  );
-};
-
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <ParticleBackground />
-      
-      {/* 3D Background */}
-      <div className="absolute inset-0 z-10">
-        <Canvas camera={{ position: [0, 0, 5] }}>
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[10, 10, 5]} intensity={1} />
-          <AnimatedSphere />
-          <OrbitControls enableZoom={false} enablePan={false} />
-        </Canvas>
-      </div>
 
       {/* Content */}
       <div className="relative z-20 text-center px-4 max-w-6xl mx-auto">

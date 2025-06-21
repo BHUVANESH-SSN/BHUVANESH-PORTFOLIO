@@ -4,9 +4,24 @@ import { HeroSection } from '@/components/HeroSection';
 import { AboutSection } from '@/components/AboutSection';
 import { ProjectsSection } from '@/components/ProjectsSection';
 import { SkillsSection } from '@/components/SkillsSection';
+import { CertificationsSection } from '@/components/CertificationsSection';
 import { ContactSection } from '@/components/ContactSection';
+import { Preloader } from '@/components/Preloader';
+import { CustomCursor } from '@/components/CustomCursor';
+import { SoundToggle } from '@/components/SoundToggle';
+import { useState, useEffect } from 'react';
 
 const Index = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const pageVariants = {
     initial: {
       opacity: 0,
@@ -26,8 +41,15 @@ const Index = () => {
     duration: 0.8,
   };
 
+  if (isLoading) {
+    return <Preloader />;
+  }
+
   return (
     <AnimatePresence mode="wait">
+      <CustomCursor />
+      <SoundToggle />
+      
       <motion.div
         key="portfolio"
         initial="initial"
@@ -54,13 +76,14 @@ const Index = () => {
                   { name: 'About', href: '#about' }, 
                   { name: 'Projects', href: '#projects' },
                   { name: 'Skills', href: '#skills' },
+                  { name: 'Certifications', href: '#certifications' },
                   { name: 'Contact', href: '#contact' }
                 ].map((item, index) => (
                   <motion.a
                     key={item.name}
                     href={item.href}
-                    className="text-white hover:text-neon-gold hover:bg-gray-800 transition-all duration-300 font-fira-code font-bold px-4 py-2 rounded"
-                    whileHover={{ scale: 1.05 }}
+                    className="text-white hover:text-neon-gold hover:bg-gray-800 transition-all duration-300 font-fira-code font-bold px-4 py-2 rounded cursor-pointer"
+                    whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -92,6 +115,10 @@ const Index = () => {
             <SkillsSection />
           </div>
           
+          <div id="certifications">
+            <CertificationsSection />
+          </div>
+          
           <div id="contact">
             <ContactSection />
           </div>
@@ -108,7 +135,7 @@ const Index = () => {
         >
           <div className="max-w-6xl mx-auto">
             <p className="text-gray-500 font-fira-code">
-              © 2025 John Doe | Font: Fira Code inspired by freeCodeCamp
+              © 2025 Bhuvanesh S | Font: Fira Code inspired by freeCodeCamp
             </p>
           </div>
         </motion.footer>

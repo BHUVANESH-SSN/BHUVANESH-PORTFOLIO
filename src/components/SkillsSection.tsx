@@ -6,44 +6,24 @@ import { Card } from '@/components/ui/card';
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Languages",
     color: "electric-blue",
-    skills: [
-      { name: "React/Next.js", level: 95 },
-      { name: "Vue.js", level: 88 },
-      { name: "TypeScript", level: 92 },
-      { name: "Three.js", level: 78 },
-    ]
+    skills: ["C", "C++", "JavaScript", "Python", "Java"]
   },
   {
-    title: "Backend",
+    title: "Frameworks",
     color: "neon-green",
-    skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "PostgreSQL", level: 88 },
-      { name: "MongoDB", level: 82 },
-    ]
-  },
-  {
-    title: "Design",
-    color: "neon-purple",
-    skills: [
-      { name: "UI/UX Design", level: 92 },
-      { name: "Figma", level: 90 },
-      { name: "Adobe Creative", level: 78 },
-      { name: "3D Modeling", level: 72 },
-    ]
+    skills: ["HTML", "CSS", "React Js", "Node Js", "Express Js", "Bootstrap"]
   },
   {
     title: "Tools",
+    color: "neon-purple",
+    skills: ["Git", "GitHub", "VS Code", "Postman", "MongoDB", "Metasploit", "Wireshark", "Nmap"]
+  },
+  {
+    title: "Concepts",
     color: "neon-gold",
-    skills: [
-      { name: "Git/GitHub", level: 95 },
-      { name: "Docker", level: 80 },
-      { name: "AWS", level: 75 },
-      { name: "CI/CD", level: 82 },
-    ]
+    skills: ["DSA", "OOP", "DBMS", "OS"]
   }
 ];
 
@@ -73,17 +53,6 @@ export const SkillsSection = () => {
     },
   };
 
-  const progressVariants = {
-    hidden: { width: 0 },
-    visible: (level: number) => ({
-      width: `${level}%`,
-      transition: {
-        duration: 1.5,
-        delay: 0.5,
-      },
-    }),
-  };
-
   return (
     <section ref={ref} className="py-20 px-4 max-w-6xl mx-auto">
       <motion.div
@@ -92,11 +61,11 @@ export const SkillsSection = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h2 className="text-5xl md:text-6xl font-tech font-bold mb-6">
-          <span className="gradient-text glow-text">My Skills</span>
+        <h2 className="text-5xl md:text-6xl font-fira-code font-bold mb-6">
+          <span className="gradient-text glow-text">Skills & Tools</span>
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-electric-blue to-neon-purple mx-auto" />
-        <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
+        <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto font-fira-code">
           Technologies and tools I use to bring ideas to life
         </p>
       </motion.div>
@@ -109,33 +78,24 @@ export const SkillsSection = () => {
       >
         {skillCategories.map((category) => (
           <motion.div key={category.title} variants={categoryVariants}>
-            <Card className="glass-card p-6 neon-border">
-              <h3 className={`text-2xl font-tech font-bold mb-6 text-${category.color} glow-text`}>
-                {category.title}
+            <Card className="glass-card p-6 neon-border cursor-pointer group hover:scale-105 transition-all duration-300">
+              <h3 className={`text-2xl font-fira-code font-bold mb-6 text-${category.color} glow-text`}>
+                {category.title}:
               </h3>
               
-              <div className="space-y-4">
-                {category.skills.map((skill) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-foreground font-medium">{skill.name}</span>
-                      <span className={`text-${category.color} font-tech font-bold`}>
-                        {skill.level}%
-                      </span>
-                    </div>
-                    
-                    <div className="h-2 bg-dark-card rounded-full overflow-hidden">
-                      <motion.div
-                        className={`h-full bg-gradient-to-r from-${category.color} to-${category.color}/60 rounded-full relative`}
-                        variants={progressVariants}
-                        initial="hidden"
-                        animate={isInView ? "visible" : "hidden"}
-                        custom={skill.level}
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
-                      </motion.div>
-                    </div>
-                  </div>
+              <div className="flex flex-wrap gap-3">
+                {category.skills.map((skill, index) => (
+                  <motion.span
+                    key={skill}
+                    className="px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg text-white font-fira-code border border-gray-600 hover:border-neon-gold transition-all duration-300 cursor-pointer"
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    {skill}
+                  </motion.span>
                 ))}
               </div>
             </Card>
@@ -145,10 +105,10 @@ export const SkillsSection = () => {
 
       {/* Floating skill icons */}
       <div className="relative mt-16 h-32 overflow-hidden">
-        {['⚛️', '🎨', '🚀', '💻', '🔥', '⚡'].map((icon, index) => (
+        {['💻', '🎨', '🚀', '⚡', '🔥', '⚛️'].map((icon, index) => (
           <motion.div
             key={index}
-            className="absolute text-4xl opacity-20"
+            className="absolute text-4xl opacity-20 cursor-pointer"
             animate={{
               y: [0, -20, 0],
               x: [0, Math.sin(index) * 10, 0],
@@ -163,6 +123,7 @@ export const SkillsSection = () => {
               left: `${15 + index * 15}%`,
               top: `${Math.random() * 50}%`,
             }}
+            whileHover={{ scale: 1.5, opacity: 0.8 }}
           >
             {icon}
           </motion.div>

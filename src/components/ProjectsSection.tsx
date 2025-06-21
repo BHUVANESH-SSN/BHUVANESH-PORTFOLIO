@@ -9,41 +9,41 @@ import { Github, ExternalLink } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with React, Node.js, and PostgreSQL",
-    image: "/placeholder.svg",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    github: "#",
-    demo: "#",
+    title: "Pacman Game (C)",
+    description: "Classic arcade game recreation in C with advanced graphics and smooth gameplay mechanics.",
+    image: "https://i.ytimg.com/vi/i_OjztdQ8iw/hqdefault.jpg",
+    tags: ["C Programming", "Game Development", "Graphics"],
+    github: "https://github.com/BHUVANESH-SSN/PACMAN-C",
+    demo: "https://www.linkedin.com/posts/bhuvanesh-cse...",
     color: "electric-blue"
   },
   {
     id: 2,
-    title: "AI Dashboard",
-    description: "Interactive dashboard with real-time data visualization and AI insights",
+    title: "Bus Ticket Reservation System",
+    description: "Console-based Java application using JDBC for efficient ticket booking and admin control.",
     image: "/placeholder.svg",
-    tags: ["Vue.js", "Python", "TensorFlow", "D3.js"],
-    github: "#",
+    tags: ["Java", "JDBC", "Database", "Console App"],
+    github: "https://github.com/BHUVANESH-SSN/BUS-TICKET-RESERVATION-SYSTEM-JAVA",
     demo: "#",
     color: "neon-purple"
   },
   {
     id: 3,
-    title: "Mobile Banking App",
-    description: "Secure mobile banking application with biometric authentication",
+    title: "JPMorgan Chase Virtual Job Simulation",
+    description: "Backend system simulation for JPMorgan Chase Midas Core using Kafka and Spring Boot.",
     image: "/placeholder.svg",
-    tags: ["React Native", "Express", "MongoDB", "JWT"],
-    github: "#",
+    tags: ["Spring Boot", "Kafka", "Backend", "Simulation"],
+    github: "https://github.com/BHUVANESH-SSN/JPMorgan-Chase-Virtual-Internship",
     demo: "#",
     color: "neon-green"
   },
   {
     id: 4,
-    title: "3D Portfolio Website",
-    description: "Creative portfolio with Three.js animations and interactive elements",
+    title: "GFG 160 DSA Challenge",
+    description: "Personal solutions to 160 essential DSA problems from GeeksforGeeks with optimized approaches.",
     image: "/placeholder.svg",
-    tags: ["Three.js", "GSAP", "Blender", "WebGL"],
-    github: "#",
+    tags: ["Data Structures", "Algorithms", "Problem Solving", "GeeksforGeeks"],
+    github: "https://github.com/BHUVANESH-SSN/GFG-160-SOLUTIONS",
     demo: "#",
     color: "neon-gold"
   }
@@ -85,11 +85,11 @@ export const ProjectsSection = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <h2 className="text-5xl md:text-6xl font-tech font-bold mb-6">
+        <h2 className="text-5xl md:text-6xl font-fira-code font-bold mb-6">
           <span className="gradient-text glow-text">Featured Projects</span>
         </h2>
         <div className="w-24 h-1 bg-gradient-to-r from-electric-blue to-neon-purple mx-auto" />
-        <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto">
+        <p className="text-xl text-muted-foreground mt-6 max-w-2xl mx-auto font-fira-code">
           Explore my latest work showcasing innovation, creativity, and technical excellence
         </p>
       </motion.div>
@@ -109,7 +109,7 @@ export const ProjectsSection = () => {
             onHoverEnd={() => setHoveredProject(null)}
           >
             <Card 
-              className={`glass-card overflow-hidden transition-all duration-500 transform-gpu group ${
+              className={`glass-card overflow-hidden transition-all duration-500 transform-gpu group cursor-pointer ${
                 hoveredProject === project.id 
                   ? 'scale-105 rotate-y-5 shadow-2xl neon-border' 
                   : 'hover:scale-102'
@@ -132,26 +132,30 @@ export const ProjectsSection = () => {
                     <Button
                       size="sm"
                       className="bg-electric-blue/20 hover:bg-electric-blue/40 text-electric-blue border border-electric-blue"
+                      onClick={() => window.open(project.github, '_blank')}
                     >
                       <Github className="h-4 w-4 mr-2" />
                       Code
                     </Button>
-                    <Button
-                      size="sm"
-                      className="bg-neon-purple/20 hover:bg-neon-purple/40 text-neon-purple border border-neon-purple"
-                    >
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Demo
-                    </Button>
+                    {project.demo !== '#' && (
+                      <Button
+                        size="sm"
+                        className="bg-neon-purple/20 hover:bg-neon-purple/40 text-neon-purple border border-neon-purple"
+                        onClick={() => window.open(project.demo, '_blank')}
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Demo
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
 
               <div className="p-6">
-                <h3 className={`text-xl font-tech font-bold mb-3 text-${project.color} glow-text`}>
+                <h3 className={`text-xl font-fira-code font-bold mb-3 text-${project.color} glow-text`}>
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed font-fira-code">
                   {project.description}
                 </p>
                 
@@ -159,7 +163,7 @@ export const ProjectsSection = () => {
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 text-sm bg-gradient-to-r from-electric-blue/10 to-neon-purple/10 border border-electric-blue/30 rounded-full text-electric-blue"
+                      className="px-3 py-1 text-sm bg-gradient-to-r from-electric-blue/10 to-neon-purple/10 border border-electric-blue/30 rounded-full text-electric-blue font-fira-code"
                     >
                       {tag}
                     </span>
@@ -169,20 +173,6 @@ export const ProjectsSection = () => {
             </Card>
           </motion.div>
         ))}
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        className="text-center mt-12"
-      >
-        <Button
-          size="lg"
-          className="neon-border bg-transparent hover:bg-electric-blue/20 text-electric-blue font-tech text-lg px-8 py-4"
-        >
-          View All Projects
-        </Button>
       </motion.div>
     </section>
   );

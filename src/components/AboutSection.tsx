@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -29,6 +30,14 @@ export const AboutSection = () => {
     },
   };
 
+  const aboutPoints = [
+    "🎓 3rd-year Computer Science Engineering student committed to continuous growth and excellence in the tech domain.",
+    "💡 Passionate Problem Solver with regular activity on LeetCode, GeeksForGeeks, and Codeforces.",
+    "🧠 Deep understanding of Data Structures & Algorithms — continuously sharpening my skills with competitive challenges.",
+    "🌐 Exploring Full-Stack Web Development with hands-on experience in both frontend and backend technologies.",
+    "🚀 Quick learner who embraces new technologies and thrives in fast-paced environments."
+  ];
+
   return (
     <section ref={ref} className="py-20 px-4 max-w-6xl mx-auto">
       <motion.div
@@ -39,7 +48,7 @@ export const AboutSection = () => {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-5xl md:text-6xl font-tech font-bold mb-6"
+          className="text-5xl md:text-6xl font-fira-code font-bold mb-6"
         >
           <span className="gradient-text glow-text">About Me</span>
         </motion.h2>
@@ -49,91 +58,37 @@ export const AboutSection = () => {
         />
       </motion.div>
 
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="grid lg:grid-cols-1 gap-12 items-center">
         <motion.div
           variants={itemVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           className="space-y-6"
         >
-          <h3 className="text-3xl font-tech text-electric-blue glow-text">
-            Passionate Developer & Designer
-          </h3>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            I'm a full-stack developer with 5+ years of experience creating 
-            innovative digital solutions. My passion lies in combining 
-            cutting-edge technology with exceptional user experience design.
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            From concept to deployment, I specialize in building scalable 
-            applications using modern frameworks and tools. I believe in 
-            clean code, responsive design, and creating experiences that 
-            make a lasting impact.
-          </p>
-          
-          <div className="grid grid-cols-2 gap-4 mt-8">
-            {[
-              { label: "Projects Completed", value: "50+" },
-              { label: "Years Experience", value: "5+" },
-              { label: "Happy Clients", value: "30+" },
-              { label: "Technologies", value: "20+" },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                variants={itemVariants}
-                className="text-center"
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="text-2xl font-tech font-bold text-neon-green glow-text">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
-          variants={itemVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="space-y-6"
-        >
-          <Card className="glass-card p-6 neon-border">
-            <h4 className="text-xl font-tech text-neon-purple mb-4">What I Do</h4>
-            <ul className="space-y-3 text-muted-foreground">
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-electric-blue rounded-full mr-3"></div>
-                Frontend Development (React, Vue, Angular)
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-neon-green rounded-full mr-3"></div>
-                Backend Development (Node.js, Python, PHP)
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-neon-purple rounded-full mr-3"></div>
-                UI/UX Design & Prototyping
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-neon-gold rounded-full mr-3"></div>
-                3D Graphics & Animation
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 bg-electric-blue rounded-full mr-3"></div>
-                Database Design & Optimization
-              </li>
+          <Card className="glass-card p-8 neon-border">
+            <ul className="space-y-6 text-lg text-muted-foreground font-fira-code">
+              {aboutPoints.map((point, index) => (
+                <motion.li
+                  key={index}
+                  className="flex items-start gap-4 cursor-pointer"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  whileHover={{ 
+                    scale: 1.02, 
+                    x: 10,
+                    transition: { duration: 0.2 }
+                  }}
+                >
+                  <span className="text-neon-gold font-bold">
+                    {point.split(' ')[0]}
+                  </span>
+                  <span>
+                    {point.split(' ').slice(1).join(' ')}
+                  </span>
+                </motion.li>
+              ))}
             </ul>
-          </Card>
-
-          <Card className="glass-card p-6 neon-border">
-            <h4 className="text-xl font-tech text-neon-gold mb-4">My Approach</h4>
-            <p className="text-muted-foreground">
-              I believe in user-centered design and agile development. 
-              Every project starts with understanding the user's needs and 
-              ends with a solution that exceeds expectations. I'm committed 
-              to writing clean, maintainable code and staying updated with 
-              the latest industry trends.
-            </p>
           </Card>
         </motion.div>
       </div>

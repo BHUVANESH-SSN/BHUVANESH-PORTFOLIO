@@ -2,39 +2,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap');
 
 @layer base {
   :root {
-    --background: 10 10% 4%;
-    --foreground: 0 0% 98%;
+    --background: 43 37% 15%;
+    --foreground: 0 0% 94%;
 
-    --card: 0 0% 7%;
+    --card: 0 0% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 7%;
+    --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 195 100% 50%;
+    --primary: 51 100% 50%;
     --primary-foreground: 0 0% 10%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 0 0% 18%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 271 81% 56%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 195 100% 50%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 51 100% 50%;
 
     --radius: 0.75rem;
   }
@@ -46,8 +44,9 @@
   }
 
   body {
-    @apply bg-dark-bg text-foreground font-modern;
+    @apply bg-[#2b2525] text-foreground font-fira-code;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   html {
@@ -60,24 +59,80 @@
     text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 40px currentColor;
   }
 
+  .gold-glow {
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500, 0 0 30px #FF8C00;
+  }
+
   .neon-border {
-    border: 1px solid transparent;
-    background: linear-gradient(45deg, #00D9FF, #8B5CF6, #39FF14, #FFD700) padding-box,
-                linear-gradient(45deg, #00D9FF, #8B5CF6, #39FF14, #FFD700) border-box;
-    animation: glow-pulse 2s ease-in-out infinite;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .neon-border:hover {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
+    transform: translateY(-5px);
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #00D9FF, #8B5CF6, #39FF14);
+    background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glass-card {
-    background: rgba(17, 17, 17, 0.8);
+    background: rgba(30, 30, 30, 0.9);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .project-card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .typewriter-text {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #FFD700;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes blink {
+    0%, 50% { border-color: #FFD700; }
+    51%, 100% { border-color: transparent; }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4);
+    }
   }
 }
 
@@ -87,14 +142,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: #2b2525;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #00D9FF, #8B5CF6);
+  background: linear-gradient(45deg, #FFD700, #FFA500);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #8B5CF6, #39FF14);
+  background: linear-gradient(45deg, #FFA500, #FF8C00);
 }

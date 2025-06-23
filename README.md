@@ -1,73 +1,179 @@
-# Welcome to your Lovable project
+# 🚀 Developer Portfolio Website
 
-## Project info
+A modern, interactive developer portfolio built to **showcase your skills, projects, certifications, and coding achievements**. Designed to leave a lasting impression with beautiful UI, smooth animations, real-time integrations, and playful features like **Hacker Mode**.
 
-**URL**: https://lovable.dev/projects/af7c1a0d-1693-4fca-b201-e4be9740c6fa
+---
 
-## How can I edit this code?
+## 🌟 Project Overview
 
-There are several ways of editing your application.
+This is a modern, interactive developer portfolio built to showcase your skills, projects, certifications, and coding achievements. It’s designed for maximum impact—combining beautiful UI, smooth animations, real-time data, and playful features like Hacker Mode to stand out to recruiters and fellow developers.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/af7c1a0d-1693-4fca-b201-e4be9740c6fa) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+### Frontend
+- **React.js (TypeScript)** – Component-based, type-safe frontend
+- **Tailwind CSS** – Utility-first styling for responsive design
+- **Framer Motion** – For beautiful, declarative animations
 
-**Use your preferred IDE**
+### Backend & APIs
+- **EmailJS** – Send contact form messages directly to email
+- **Optional: Custom Node.js/Express API** – For coding stats
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Hosting
+- **Firebase Hosting** – Fast, secure, and reliable
+- **Alternative** – Vercel or Netlify
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🏠 Sections & Features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 1. 💼 About Me
+- Visually engaging intro with gradient text and clean layout
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 2. 🧠 Skills & Tools
+- Interactive cards showing languages, frameworks, and tools
+- Fully responsive with highlight effects
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 3. 🧩 Projects
+- Project cards with title, description, tech stack, GitHub & demo links
+- Hover effects and animated borders
+- Tech badges for recruiter visibility
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 4. 📊 Coding Profiles
+- Real-time stats from **LeetCode, GFG, Codeforces, HackerRank**
+- API-powered, up-to-date ranks and problems solved
+- Profile links included
 
-**Edit a file directly in GitHub**
+### 5. 🎓 Certifications
+- Verified certifications with logos and credential links
+- Gradient text and card animations
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 6. 📬 Contact / Get In Touch
+- Social links with gradient icons
+- Contact form powered by EmailJS
+- Messages sent directly to your email
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🎨 UI/UX & Animations
 
-## What technologies are used for this project?
+- **🌙 Day/Night Toggle** – Seamless theme switching
+- **🧬 Live Floating Icons** – Dynamic tech logos in the background
+- **🌌 Particle & Star Galaxy Backgrounds** – For immersive experience
+- **🖱️ Hover & Shadow Effects** – Clean, tactile feedback
+- **🌈 Gradient Text** – For section headers and emphasis
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🕹️ Special Features
 
-## How can I deploy this project?
+### 👨‍💻 Hacker Mode
+- Activated via floating terminal icon
+- UI switches to green-on-black hacker theme
+- Hides sensitive info, simulates 404 on all links
+- Sound and visual effects enhance realism
 
-Simply open [Lovable](https://lovable.dev/projects/af7c1a0d-1693-4fca-b201-e4be9740c6fa) and click on Share -> Publish.
+### 🔊 Sound Effects
+- Triggered on:
+  - Resume download
+  - Link clicks (projects, certs, coding profiles)
+  - Form submissions
 
-## Can I connect a custom domain to my Lovable project?
+### ✨ Easter Egg
+- Click profile picture 5 times to trigger hidden animation
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🚀 Deployment & Hosting
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **Firebase Hosting** – Fast and reliable for production
+- **Alternative** – Vercel or Netlify for instant global deployment
+
+---
+
+## 📄 Resume Download
+
+- “Download Resume” button with sound effect
+- Downloads your latest resume as a PDF
+
+---
+
+## 🔗 Project & Demo Links
+
+Each project card includes:
+- **Live Demo**
+- **GitHub Repo**
+- **Tech Stack Badges**
+
+---
+
+## 🧑‍💻 Coding Profiles
+
+- **LeetCode, GFG, HackerRank, Codeforces**
+- API-based real-time stats
+- Profile links included
+
+---
+
+## 🏅 Certifications
+
+- Each card links to official credential page
+- Animated cards for a professional look
+
+---
+
+## 📬 Contact & Social Links
+
+### Social Icons:
+- LinkedIn
+- GitHub
+- Email
+
+### Contact Form:
+- Real-time form using EmailJS
+- “Let’s Collaborate” section to encourage networking
+
+---
+
+## 👥 User Modes
+
+- **Normal Mode** – Full functionality and visibility
+- **Hacker Mode** – Playful simulation with restrictions
+
+---
+
+## 🖼️ Graphics & Visuals
+
+- Custom icons and illustrations
+- Particle/galaxy backgrounds
+- Optimized for performance and responsiveness
+
+---
+
+## 📝 Additional Notes
+
+### ✅ Accessibility
+- Keyboard navigable
+- Semantic HTML
+- High contrast mode
+
+### ⚡ Performance
+- Lazy loading
+- Optimized assets
+- Code splitting
+
+### 📈 SEO
+- Meta tags
+- Open Graph tags
+- Structured data
+
+---
+
+## 💡 In Summary
+
+This portfolio isn’t just a digital resume—it’s a **living, breathing showcase** of your technical expertise, creativity, and personality. Built to **impress recruiters**, **connect with developers**, and make your personal brand shine online.
+
+---
+

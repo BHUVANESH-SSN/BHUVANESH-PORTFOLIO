@@ -27,6 +27,21 @@ This is a modern, interactive developer portfolio built to showcase your skills,
 
 ---
 
+## 🔗 Project & Demo Links
+
+Each project card includes:
+
+- **Live Demo**: [https://bhuvanesh-s.web.app/](https://bhuvanesh-s.web.app/)
+- **GitHub Repo**: [https://github.com/BHUVANESH-SSN/BHUVANESH-PORTFOLIO](https://github.com/BHUVANESH-SSN/BHUVANESH-PORTFOLIO)
+- **Tech Stack Badges**:
+  - ![React](https://img.shields.io/badge/Frontend-React-blue?logo=react)
+  - ![TypeScript](https://img.shields.io/badge/TypeScript-Enabled-blue?logo=typescript)
+  - ![Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind_CSS-38B2AC?logo=tailwind-css)
+  - ![Framer Motion](https://img.shields.io/badge/Animations-Framer_Motion-purple?logo=framer)
+  - ![Firebase](https://img.shields.io/badge/Hosting-Firebase-yellow?logo=firebase)
+
+---
+
 ## 🏠 Sections & Features
 
 ### 1. 💼 About Me
@@ -51,9 +66,15 @@ This is a modern, interactive developer portfolio built to showcase your skills,
 - Gradient text and card animations
 
 ### 6. 📬 Contact / Get In Touch
+## Social Icons:
+- LinkedIn
+- GitHub
+- Email
 - Social links with gradient icons
-- Contact form powered by EmailJS
-- Messages sent directly to your email
+## 📄 Contact form powered by EmailJS
+
+- Real-time form using EmailJS
+- “Let’s Collaborate” section to encourage networking
 
 ---
 
@@ -67,7 +88,7 @@ This is a modern, interactive developer portfolio built to showcase your skills,
 
 ---
 
-## 🕹️ Special Features
+# 🕹️ Special Features
 
 ### 👨‍💻 Hacker Mode
 - Activated via floating terminal icon
@@ -100,43 +121,6 @@ This is a modern, interactive developer portfolio built to showcase your skills,
 
 ---
 
-## 🔗 Project & Demo Links
-
-Each project card includes:
-- **Live Demo**
-- **GitHub Repo**
-- **Tech Stack Badges**
-
----
-
-## 🧑‍💻 Coding Profiles
-
-- **LeetCode, GFG, HackerRank, Codeforces**
-- API-based real-time stats
-- Profile links included
-
----
-
-## 🏅 Certifications
-
-- Each card links to official credential page
-- Animated cards for a professional look
-
----
-
-## 📬 Contact & Social Links
-
-### Social Icons:
-- LinkedIn
-- GitHub
-- Email
-
-### Contact Form:
-- Real-time form using EmailJS
-- “Let’s Collaborate” section to encourage networking
-
----
-
 ## 👥 User Modes
 
 - **Normal Mode** – Full functionality and visibility
@@ -150,27 +134,16 @@ Each project card includes:
 - Particle/galaxy backgrounds
 - Optimized for performance and responsiveness
 
----
-
-## 📝 Additional Notes
-
-### ✅ Accessibility
-- Keyboard navigable
-- Semantic HTML
-- High contrast mode
-
-### ⚡ Performance
-- Lazy loading
-- Optimized assets
-- Code splitting
-
-### 📈 SEO
-- Meta tags
-- Open Graph tags
-- Structured data
 
 ---
 
+## Must to with my portfolio 
+- 1. Try with Hacker mode by clicking the terminal icon.
+- 2. Try Day (light theme) and Night(dark theme)
+- 3. Click My profile photo 5 times and see magic.
+- 4. Try to downlaod my resume
+- 5. Send me message using **"Lets colloborate"** Section
+      
 ## 💡 In Summary
 
 This portfolio isn’t just a digital resume—it’s a **living, breathing showcase** of your technical expertise, creativity, and personality. Built to **impress recruiters**, **connect with developers**, and make your personal brand shine online.

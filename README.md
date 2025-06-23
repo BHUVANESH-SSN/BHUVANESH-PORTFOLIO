@@ -66,12 +66,12 @@ Each project card includes:
 - Gradient text and card animations
 
 ### 6. 📬 Contact / Get In Touch
-## Social Icons:
+### Social Icons:
 - LinkedIn
 - GitHub
 - Email
 - Social links with gradient icons
-## 📄 Contact form powered by EmailJS
+### 📄 Contact form powered by EmailJS
 
 - Real-time form using EmailJS
 - “Let’s Collaborate” section to encourage networking
@@ -138,11 +138,11 @@ Each project card includes:
 ---
 
 ## Must to with my portfolio 
-- 1. Try with Hacker mode by clicking the terminal icon.
-- 2. Try Day (light theme) and Night(dark theme)
-- 3. Click My profile photo 5 times and see magic.
-- 4. Try to downlaod my resume
-- 5. Send me message using **"Lets colloborate"** Section
+-  Try with Hacker mode by clicking the terminal icon.
+-  Try Day (light theme) and Night(dark theme)
+-  Click My profile photo 5 times and see magic.
+-  Try to downlaod my resume
+-  Send me message using **"Lets colloborate"** Section
       
 ## 💡 In Summary
 

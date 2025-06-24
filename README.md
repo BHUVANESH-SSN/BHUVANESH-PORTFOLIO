@@ -150,3 +150,10 @@ This portfolio isn’t just a digital resume—it’s a **living, breathing show
 
 ---
 
+## IDE Used:
+
+-Vs Code
+-Cursor AI
+
+---
+
